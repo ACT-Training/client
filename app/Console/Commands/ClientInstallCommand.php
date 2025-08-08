@@ -20,8 +20,7 @@ class ClientInstallCommand extends Command
 
         $username = text(
             label: 'Your FluxUI username (email)',
-            required: true,
-            hint: 'This will be displayed on your profile.'
+            required: true
         );
 
         $userPassword = password(
