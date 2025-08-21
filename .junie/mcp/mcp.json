@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "/Users/simon/Library/Application Support/Herd/bin/php84",
+            "args": ["/Users/simon/ACT/client/artisan", "boost:mcp"]
+        },
+        "herd": {
+            "command": "/Users/simon/Library/Application Support/Herd/bin/php84",
+            "args": ["/Applications/Herd.app/Contents/Resources/herd-mcp.phar"],
+            "env": {
+                "SITE_PATH": "/Users/simon/ACT/client"
+            }
+        }
+    }
+}

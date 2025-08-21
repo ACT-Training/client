@@ -60,6 +60,11 @@ class ClientInstallCommand extends Command
 
         info('SSO installed successfully.');
 
+        info('Installing Laravel Boost...');
+
+        $this->call('boost:install');
+
+        info('Laravel Boost installed successfully.');
     }
 
     protected function setEnvValue(string $key, string $value): void
