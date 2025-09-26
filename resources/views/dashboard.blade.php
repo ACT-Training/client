@@ -1,8 +1,8 @@
 <x-layouts.app :title="__('Dashboard')">
     <div class="p-6">
         <div class="mb-6">
-            <flux:heading size="lg">Dashboard</flux:heading>
-            <flux:text class="text-zinc-400">Welcome back, {{ auth()->user()->name }}</flux:text>
+            <flux:heading size="xl">Dashboard</flux:heading>
+            <flux:subheading size="lg">Welcome back, {{ auth()->user()->name }}</flux:subheading>
         </div>
 
         <!-- Stats Cards -->

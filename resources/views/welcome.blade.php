@@ -13,7 +13,7 @@
                             role="alert"
                         >
                             <span class="mr-3 rounded-full bg-orange-600 px-3 py-1 text-xs text-white">New</span>
-                            <span class="text-sm font-medium">Our client platform</span>
+                            <span class="text-sm font-medium">Our {{ config('app.name') }} platform</span>
                             <svg
                                 class="ml-2 h-5 w-5"
                                 fill="currentColor"
@@ -32,13 +32,14 @@
                     <h1
                         class="mb-4 text-4xl leading-none font-extrabold tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white"
                     >
-                        Client Application
+                        {{ config('app.name') }}
                     </h1>
                     <p
                         class="mx-auto mb-6 max-w-xl font-light text-gray-500 md:text-lg lg:mx-0 xl:mb-8 xl:text-xl dark:text-gray-400"
                     >
-                        This is a template for creating ACT Training applications. Please update the text and image on
-                        this page.
+                        This is a template for creating applications at ACT Training.
+                        <br />
+                        Please update the text and image on this page.
                     </p>
 
                     <div>
