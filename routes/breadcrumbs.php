@@ -1,6 +1,6 @@
 <?php
 
-use App\Support\Breadcrumbs;
+use ActTraining\LaravelBreadcrumbs\Facades\Breadcrumbs;
 
 // Dashboard
 Breadcrumbs::define('dashboard', function ($trail) {

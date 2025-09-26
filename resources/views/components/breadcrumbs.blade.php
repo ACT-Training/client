@@ -1,7 +1,7 @@
 @props(['route' => null, 'params' => []])
 
 @php
-    use App\Support\Breadcrumbs;
+    use ActTraining\LaravelBreadcrumbs\Facades\Breadcrumbs;
 
     $breadcrumbs = [];
 

@@ -1,15 +1,24 @@
 {
-    "permissions": {
-        "allow": [
-            "Bash(mkdir:*)",
-            "Bash(php artisan make:test:*)",
-            "Bash(php artisan test:*)",
-            "Bash(vendor/bin/pint:*)",
-            "Bash(npm run build:*)",
-            "Bash(php artisan route:list:*)",
-            "mcp__laravel-boost__search-docs"
-        ]
-    },
-    "enableAllProjectMcpServers": true,
-    "enabledMcpjsonServers": ["laravel-boost", "herd"]
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(php artisan make:test:*)",
+      "Bash(php artisan test:*)",
+      "Bash(vendor/bin/pint:*)",
+      "Bash(npm run build:*)",
+      "Bash(php artisan route:list:*)",
+      "mcp__laravel-boost__search-docs",
+      "Bash(composer require:*)",
+      "Bash(composer config:*)",
+      "Bash(php artisan package:discover:*)",
+      "Bash(composer:*)",
+      "Bash(php artisan config:clear:*)",
+      "mcp__laravel-boost__tinker"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "laravel-boost",
+    "herd"
+  ]
 }
