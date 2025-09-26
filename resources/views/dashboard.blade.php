@@ -1,5 +1,5 @@
 <x-layouts.app :title="__('Dashboard')">
-    <div class="p-6">
+    <div class="p-3">
         <div class="mb-6">
             <flux:heading size="xl">Dashboard</flux:heading>
             <flux:subheading size="lg">Welcome back, {{ auth()->user()->name }}</flux:subheading>
@@ -7,68 +7,72 @@
 
         <!-- Stats Cards -->
         <div class="mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <flux:card class="p-6">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <flux:text class="text-sm font-medium text-zinc-400">Total Users</flux:text>
-                        <flux:heading size="lg" class="text-2xl font-bold">2,543</flux:heading>
-                    </div>
-                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900">
-                        <flux:icon.users class="h-4 w-4 text-blue-600 dark:text-blue-400" />
+            <flux:card class="overflow-hidden p-0">
+                <div class="p-4">
+                    <flux:text size="sm" variant="muted">Total Learners</flux:text>
+                    <flux:heading size="xl" class="mt-2 tabular-nums">3,543</flux:heading>
+                    <div class="mt-2 flex items-center gap-1">
+                        <flux:badge variant="outline" color="green" size="xs">+12%</flux:badge>
+                        <flux:text size="xs" variant="muted">from last month</flux:text>
                     </div>
                 </div>
-                <div class="mt-4 flex items-center">
-                    <flux:text class="text-xs text-green-600">+12%</flux:text>
-                    <flux:text class="ml-1 text-xs text-zinc-400">from last month</flux:text>
-                </div>
+                <flux:chart class="h-12" :value="[120, 132, 101, 134, 90, 230, 210, 150, 180, 200, 220, 180]">
+                    <flux:chart.svg gutter="0">
+                        <flux:chart.line class="text-blue-500" />
+                        <flux:chart.area class="text-blue-100 dark:text-blue-400/30" />
+                    </flux:chart.svg>
+                </flux:chart>
             </flux:card>
 
-            <flux:card class="p-6">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <flux:text class="text-sm font-medium text-zinc-400">Revenue</flux:text>
-                        <flux:heading size="lg" class="text-2xl font-bold">$45,231</flux:heading>
-                    </div>
-                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 dark:bg-green-900">
-                        <flux:icon.currency-dollar class="h-4 w-4 text-green-600 dark:text-green-400" />
+            <flux:card class="overflow-hidden p-0">
+                <div class="p-4">
+                    <flux:text size="sm" variant="muted">Sign Ups</flux:text>
+                    <flux:heading size="xl" class="mt-2 tabular-nums">452</flux:heading>
+                    <div class="mt-2 flex items-center gap-1">
+                        <flux:badge variant="outline" color="green" size="xs">+20%</flux:badge>
+                        <flux:text size="xs" variant="muted">from last month</flux:text>
                     </div>
                 </div>
-                <div class="mt-4 flex items-center">
-                    <flux:text class="text-xs text-green-600">+20%</flux:text>
-                    <flux:text class="ml-1 text-xs text-zinc-400">from last month</flux:text>
-                </div>
+                <flux:chart class="h-12" :value="[15, 18, 16, 19, 22, 25, 28, 25, 29, 28, 32, 35]">
+                    <flux:chart.svg gutter="0">
+                        <flux:chart.line class="text-green-500" />
+                        <flux:chart.area class="text-green-100 dark:text-green-400/30" />
+                    </flux:chart.svg>
+                </flux:chart>
             </flux:card>
 
-            <flux:card class="p-6">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <flux:text class="text-sm font-medium text-zinc-400">Orders</flux:text>
-                        <flux:heading size="lg" class="text-2xl font-bold">1,234</flux:heading>
-                    </div>
-                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900">
-                        <flux:icon.shopping-bag class="h-4 w-4 text-orange-600 dark:text-orange-400" />
+            <flux:card class="overflow-hidden p-0">
+                <div class="p-4">
+                    <flux:text size="sm" variant="muted">Enquiries</flux:text>
+                    <flux:heading size="xl" class="mt-2 tabular-nums">1,234</flux:heading>
+                    <div class="mt-2 flex items-center gap-1">
+                        <flux:badge variant="outline" color="green" size="xs">+5%</flux:badge>
+                        <flux:text size="xs" variant="muted">from last month</flux:text>
                     </div>
                 </div>
-                <div class="mt-4 flex items-center">
-                    <flux:text class="text-xs text-green-600">+5%</flux:text>
-                    <flux:text class="ml-1 text-xs text-zinc-400">from last month</flux:text>
-                </div>
+                <flux:chart class="h-12" :value="[45, 52, 38, 44, 50, 49, 60, 70, 91, 125, 102, 89]">
+                    <flux:chart.svg gutter="0">
+                        <flux:chart.line class="text-amber-500" />
+                        <flux:chart.area class="text-amber-100 dark:text-amber-400/30" />
+                    </flux:chart.svg>
+                </flux:chart>
             </flux:card>
 
-            <flux:card class="p-6">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <flux:text class="text-sm font-medium text-zinc-400">Conversion</flux:text>
-                        <flux:heading size="lg" class="text-2xl font-bold">3.24%</flux:heading>
-                    </div>
-                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900">
-                        <flux:icon.chart-bar class="h-4 w-4 text-purple-600 dark:text-purple-400" />
+            <flux:card class="overflow-hidden p-0">
+                <div class="p-4">
+                    <flux:text size="sm" variant="muted">Conversion</flux:text>
+                    <flux:heading size="xl" class="mt-2 tabular-nums">3.24%</flux:heading>
+                    <div class="mt-2 flex items-center gap-1">
+                        <flux:badge variant="outline" color="red" size="xs">-2%</flux:badge>
+                        <flux:text size="xs" variant="muted">from last month</flux:text>
                     </div>
                 </div>
-                <div class="mt-4 flex items-center">
-                    <flux:text class="text-xs text-red-600">-2%</flux:text>
-                    <flux:text class="ml-1 text-xs text-zinc-400">from last month</flux:text>
-                </div>
+                <flux:chart class="h-12" :value="[8.2, 7.1, 6.8, 5.4, 4.2, 3.8, 2.9, 3.1, 3.4, 3.6, 3.2, 3.24]">
+                    <flux:chart.svg gutter="0">
+                        <flux:chart.line class="text-purple-500" />
+                        <flux:chart.area class="text-purple-100 dark:text-purple-400/30" />
+                    </flux:chart.svg>
+                </flux:chart>
             </flux:card>
         </div>
 
@@ -76,70 +80,99 @@
         <div class="grid gap-4 lg:grid-cols-3">
             <!-- Chart Card -->
             <flux:card class="lg:col-span-2">
-                <div class="p-6">
+                <div class="p-4">
                     <div class="mb-4 flex items-center justify-between">
                         <div>
                             <flux:heading size="md">Revenue Overview</flux:heading>
-                            <flux:text class="text-sm text-zinc-400">Monthly revenue for the last 6 months</flux:text>
+                            <flux:text size="sm" variant="muted">Monthly revenue for the last 6 months</flux:text>
                         </div>
                         <flux:button size="sm" variant="ghost">View all</flux:button>
                     </div>
-                    <div class="flex h-80 items-center justify-center rounded-lg bg-zinc-50 dark:bg-zinc-800">
-                        <flux:text class="text-zinc-400">Chart visualization would go here</flux:text>
-                    </div>
+                    <flux:chart
+                        class="h-80"
+                        :value="[
+                        ['date' => '2024-07-01', 'revenue' => 12000],
+                        ['date' => '2024-08-01', 'revenue' => 16000],
+                        ['date' => '2024-09-01', 'revenue' => 48000],
+                        ['date' => '2024-10-01', 'revenue' => 61000],
+                        ['date' => '2024-11-01', 'revenue' => 58000],
+                        ['date' => '2024-12-01', 'revenue' => 67000]
+                    ]"
+                    >
+                        <flux:chart.svg>
+                            <flux:chart.line field="revenue" class="text-blue-500 dark:text-blue-400" />
+                            <flux:chart.area field="revenue" class="text-blue-100 dark:text-blue-400/20" />
+
+                            <flux:chart.axis axis="x" field="date">
+                                <flux:chart.axis.tick />
+                                <flux:chart.axis.line />
+                            </flux:chart.axis>
+
+                            <flux:chart.axis axis="y" :format="['style' => 'currency', 'currency' => 'GBP']">
+                                <flux:chart.axis.grid />
+                                <flux:chart.axis.tick />
+                            </flux:chart.axis>
+
+                            <flux:chart.cursor />
+                        </flux:chart.svg>
+
+                        <flux:chart.tooltip>
+                            <flux:chart.tooltip.heading
+                                field="date"
+                                :format="['year' => 'numeric', 'month' => 'long']"
+                            />
+                            <flux:chart.tooltip.value
+                                field="revenue"
+                                label="Revenue"
+                                :format="['style' => 'currency', 'currency' => 'USD']"
+                            />
+                        </flux:chart.tooltip>
+                    </flux:chart>
                 </div>
             </flux:card>
 
             <!-- Recent Activity -->
             <flux:card>
-                <div class="p-6">
+                <div class="p-4">
                     <flux:heading size="md" class="mb-4">Recent Activity</flux:heading>
                     <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div
-                                class="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 dark:bg-green-900"
-                            >
-                                <flux:icon.check class="h-4 w-4 text-green-600 dark:text-green-400" />
-                            </div>
+                        <div class="flex items-center gap-3">
+                            <flux:badge size="sm" color="green" class="rounded-full p-1.5">
+                                <flux:icon.check class="h-3 w-3" />
+                            </flux:badge>
                             <div class="min-w-0 flex-1">
-                                <flux:text class="text-sm font-medium">New order placed</flux:text>
-                                <flux:text class="text-xs text-zinc-400">2 minutes ago</flux:text>
+                                <flux:text size="sm" class="font-medium">New enquiry received</flux:text>
+                                <flux:text size="xs" variant="muted">2 minutes ago</flux:text>
                             </div>
                         </div>
 
-                        <div class="flex items-center space-x-4">
-                            <div
-                                class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"
-                            >
-                                <flux:icon.user-plus class="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                            </div>
+                        <div class="flex items-center gap-3">
+                            <flux:badge size="sm" color="blue" class="rounded-full p-1.5">
+                                <flux:icon.user-plus class="h-3 w-3" />
+                            </flux:badge>
                             <div class="min-w-0 flex-1">
-                                <flux:text class="text-sm font-medium">New user registered</flux:text>
-                                <flux:text class="text-xs text-zinc-400">5 minutes ago</flux:text>
+                                <flux:text size="sm" class="font-medium">New learner registered</flux:text>
+                                <flux:text size="xs" variant="muted">5 minutes ago</flux:text>
                             </div>
                         </div>
 
-                        <div class="flex items-center space-x-4">
-                            <div
-                                class="flex h-8 w-8 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900"
-                            >
-                                <flux:icon.exclamation-triangle class="h-4 w-4 text-orange-600 dark:text-orange-400" />
-                            </div>
+                        <div class="flex items-center gap-3">
+                            <flux:badge size="sm" color="amber" class="rounded-full p-1.5">
+                                <flux:icon.exclamation-triangle class="h-3 w-3" />
+                            </flux:badge>
                             <div class="min-w-0 flex-1">
-                                <flux:text class="text-sm font-medium">Server maintenance</flux:text>
-                                <flux:text class="text-xs text-zinc-400">1 hour ago</flux:text>
+                                <flux:text size="sm" class="font-medium">Server maintenance scheduled</flux:text>
+                                <flux:text size="xs" variant="muted">1 hour ago</flux:text>
                             </div>
                         </div>
 
-                        <div class="flex items-center space-x-4">
-                            <div
-                                class="flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900"
-                            >
-                                <flux:icon.bell class="h-4 w-4 text-purple-600 dark:text-purple-400" />
-                            </div>
+                        <div class="flex items-center gap-3">
+                            <flux:badge size="sm" color="purple" class="rounded-full p-1.5">
+                                <flux:icon.bell class="h-3 w-3" />
+                            </flux:badge>
                             <div class="min-w-0 flex-1">
-                                <flux:text class="text-sm font-medium">New notification</flux:text>
-                                <flux:text class="text-xs text-zinc-400">3 hours ago</flux:text>
+                                <flux:text size="sm" class="font-medium">System notification sent</flux:text>
+                                <flux:text size="xs" variant="muted">3 hours ago</flux:text>
                             </div>
                         </div>
                     </div>
@@ -149,33 +182,41 @@
 
         <!-- Bottom Grid -->
         <div class="mt-6 grid gap-4 lg:grid-cols-2">
-            <!-- Top Products -->
+            <!-- Top Employers -->
             <flux:card>
-                <div class="p-6">
-                    <flux:heading size="md" class="mb-4">Top Products</flux:heading>
+                <div class="p-4">
+                    <flux:heading size="md" class="mb-4">Top Employers</flux:heading>
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="h-8 w-8 rounded bg-zinc-100 dark:bg-zinc-800"></div>
-                                <flux:text class="text-sm font-medium">Product A</flux:text>
+                            <div class="flex items-center gap-3">
+                                <flux:avatar size="sm" name="Tech Solutions Ltd" color="auto" />
+                                <flux:text size="sm" class="font-medium">Tech Solutions Ltd</flux:text>
                             </div>
-                            <flux:text class="text-sm text-zinc-400">$1,234</flux:text>
+                            <flux:badge color="blue" size="sm">56 learners</flux:badge>
                         </div>
 
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="h-8 w-8 rounded bg-zinc-100 dark:bg-zinc-800"></div>
-                                <flux:text class="text-sm font-medium">Product B</flux:text>
+                            <div class="flex items-center gap-3">
+                                <flux:avatar size="sm" name="Innovation Corp" color="auto" />
+                                <flux:text size="sm" class="font-medium">Innovation Corp</flux:text>
                             </div>
-                            <flux:text class="text-sm text-zinc-400">$987</flux:text>
+                            <flux:badge color="blue" size="sm">37 learners</flux:badge>
                         </div>
 
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="h-8 w-8 rounded bg-zinc-100 dark:bg-zinc-800"></div>
-                                <flux:text class="text-sm font-medium">Product C</flux:text>
+                            <div class="flex items-center gap-3">
+                                <flux:avatar size="sm" name="Global Systems" color="auto" />
+                                <flux:text size="sm" class="font-medium">Global Systems</flux:text>
                             </div>
-                            <flux:text class="text-sm text-zinc-400">$756</flux:text>
+                            <flux:badge color="blue" size="sm">29 learners</flux:badge>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <flux:avatar size="sm" name="Digital Media Inc" color="auto" />
+                                <flux:text size="sm" class="font-medium">Digital Media Inc</flux:text>
+                            </div>
+                            <flux:badge color="blue" size="sm">16 learners</flux:badge>
                         </div>
                     </div>
                 </div>
@@ -183,27 +224,27 @@
 
             <!-- Quick Actions -->
             <flux:card>
-                <div class="p-6">
+                <div class="p-4">
                     <flux:heading size="md" class="mb-4">Quick Actions</flux:heading>
                     <div class="grid grid-cols-2 gap-3">
                         <flux:button variant="outline" class="h-20 flex-col">
                             <flux:icon.user-plus class="mb-2 h-5 w-5" />
-                            <flux:text class="text-xs">Add User</flux:text>
+                            <flux:text size="xs">Add Learner</flux:text>
                         </flux:button>
 
                         <flux:button variant="outline" class="h-20 flex-col">
-                            <flux:icon.shopping-bag class="mb-2 h-5 w-5" />
-                            <flux:text class="text-xs">New Order</flux:text>
+                            <flux:icon.academic-cap class="mb-2 h-5 w-5" />
+                            <flux:text size="xs">New Course</flux:text>
                         </flux:button>
 
                         <flux:button variant="outline" class="h-20 flex-col">
                             <flux:icon.chart-bar class="mb-2 h-5 w-5" />
-                            <flux:text class="text-xs">View Reports</flux:text>
+                            <flux:text size="xs">View Reports</flux:text>
                         </flux:button>
 
                         <flux:button variant="outline" class="h-20 flex-col">
-                            <flux:icon.cog class="mb-2 h-5 w-5" />
-                            <flux:text class="text-xs">Settings</flux:text>
+                            <flux:icon.message-circle-question-mark class="mb-2 h-5 w-5" />
+                            <flux:text size="xs">Enquiries</flux:text>
                         </flux:button>
                     </div>
                 </div>
