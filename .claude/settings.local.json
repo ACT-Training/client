@@ -1,0 +1,14 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(mkdir:*)",
+            "Bash(php artisan make:test:*)",
+            "Bash(php artisan test:*)",
+            "Bash(vendor/bin/pint:*)",
+            "Bash(npm run build:*)",
+            "Bash(php artisan route:list:*)"
+        ]
+    },
+    "enableAllProjectMcpServers": true,
+    "enabledMcpjsonServers": ["laravel-boost", "herd"]
+}

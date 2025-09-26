@@ -6,3 +6,5 @@ public/
 .git
 package-lock.json
 composer.lock
+.ai/
+resources/views/flux/*

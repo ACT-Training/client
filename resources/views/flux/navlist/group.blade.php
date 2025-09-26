@@ -1,3 +1,5 @@
+
+
 @props([
     'expandable' => false,
     'expanded' => true,
@@ -17,7 +19,7 @@
     >
         <div class="ps-3 pe-4">
             <flux:icon.chevron-down class="hidden size-3! group-data-open/disclosure-button:block" />
-            <flux:icon.chevron-right class="block size-3! group-data-open/disclosure-button:hidden" />
+            <flux:icon.chevron-right class="block size-3! group-data-open/disclosure-button:hidden rtl:rotate-180" />
         </div>
 
         <span class="text-sm leading-none font-medium">{{ $heading }}</span>
@@ -33,8 +35,8 @@
 <?php } elseif ($heading) { ?>
 
 <div {{ $attributes->class('block space-y-[2px]') }}>
-    <div class="px-1 py-2">
-        <div class="text-xs leading-none text-zinc-400">{{ $heading }}</div>
+    <div class="px-3 py-2">
+        <div class="text-sm leading-none font-medium text-zinc-400">{{ $heading }}</div>
     </div>
 
     <div>

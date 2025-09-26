@@ -17,4 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
+    })
+    ->booting(function () {
+        require_once base_path('config/breadcrumbs.php');
     })->create();
