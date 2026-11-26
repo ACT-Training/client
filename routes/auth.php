@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SSOLoginController;
+use App\Livewire\Actions\Logout;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -12,5 +13,5 @@ Route::middleware('guest')->group(function () {
 
 });
 
-Route::post('logout', App\Livewire\Actions\Logout::class)
+Route::post('logout', Logout::class)
     ->name('logout');
