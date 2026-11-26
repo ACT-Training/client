@@ -1,7 +1,11 @@
 <?php
 
+use ActTraining\LaravelBreadcrumbs\BreadcrumbsServiceProvider;
+use App\Providers\AppServiceProvider;
+use App\Providers\VoltServiceProvider;
+
 return [
-    App\Providers\AppServiceProvider::class,
-    App\Providers\VoltServiceProvider::class,
-    ActTraining\LaravelBreadcrumbs\BreadcrumbsServiceProvider::class,
+    AppServiceProvider::class,
+    VoltServiceProvider::class,
+    BreadcrumbsServiceProvider::class,
 ];

@@ -5,7 +5,7 @@ use ActTraining\LaravelBreadcrumbs\Facades\Breadcrumbs;
 
 beforeEach(function () {
     // Clear any existing breadcrumb definitions before each test
-    $reflection = new ReflectionClass(\ActTraining\LaravelBreadcrumbs\Breadcrumbs::class);
+    $reflection = new ReflectionClass(ActTraining\LaravelBreadcrumbs\Breadcrumbs::class);
     $property = $reflection->getProperty('breadcrumbs');
     $property->setAccessible(true);
     $property->setValue(null, []);
